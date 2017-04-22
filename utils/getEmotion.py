@@ -102,4 +102,4 @@ def getMatch(input):
 
 #sparse("7_11.txt")
 #parse()
-print getMatch("boys suck")
+#print getMatch("boys suck")
