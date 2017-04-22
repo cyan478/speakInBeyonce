@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, url_for, session, redirect
-#from utils import search
-#from utils import rake
-#from utils import translator
 import giphy #GIPHY api
+from utils import getEmotion
 
 app= Flask(__name__)
 
@@ -17,7 +15,8 @@ def home():
 											gif7 = giphy.getURL()[6],
 											gif8 = giphy.getURL()[7],
 											gif9 = giphy.getURL()[8],
-											gif10 = giphy.getURL()[9],)
+											gif10 = giphy.getURL()[9],
+											)
 
 if __name__ == "__main__":
 	app.debug = True
