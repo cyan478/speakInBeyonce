@@ -21,10 +21,12 @@ def home():
 @app.route("/results", methods =['POST','GET'])
 def results():
 	if request.method == 'POST':
-		print request.form
+		#rint request.form
 		if 'input' in request.form:
 			text = request.form['input']
-	return render_template("index.html")
+	lyric = getEmotion.getMatch(text)
+	print lyric + "hi"
+	return render_template("index.html", lyric = lyric)
 
 if __name__ == "__main__":
 	app.debug = True

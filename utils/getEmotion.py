@@ -73,7 +73,7 @@ def getMatch(input):
     key = inputD.keys()[0] #emotion
     val = inputD.values()[0] #num
 
-    f = open("result.txt", "r")
+    f = open("utils/result.txt", "r")
     text = f.read()
     f.close()
     result = json.loads(text)
@@ -102,4 +102,4 @@ def getMatch(input):
 
 #sparse("7_11.txt")
 #parse()
-#print getMatch("i am happy")
+print getMatch("boys suck")
