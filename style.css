@@ -1,0 +1,74 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background: #1BB996;
+  background: -webkit-linear-gradient(#1BB996,#3C4240);
+  background: -o-linear-gradient(#1BB996,#3C4240);
+  background: -moz-linear-gradient(#1BB996,#3C4240);
+  background: linear-gradient(#1BB996,#3C4240);
+  /*color: white;*/
+  font-family: 'Open Sans', sans-serif;
+}
+#container {
+  height: 650px;
+  /*background: #1BB996;
+  background: -webkit-linear-gradient(#1BB996,#3C4240);
+  background: -o-linear-gradient(#1BB996,#3C4240);
+  background: -moz-linear-gradient(#1BB996,#3C4240);
+  background: linear-gradient(#1BB996,#3C4240);*/
+  margin: 0px auto;
+}
+
+/* --------- LOGO/HEADER/TITLE ---------*/
+h1 {
+  margin: 20px 0 0 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.bolder {
+  font-weight: 900;
+}
+/* --------- */
+
+/* --------- INPUT --------- */
+textarea {
+  width: 400px;
+  height: 200px;
+  margin: 100px 0 0 50px;
+  background: rgba(255,255,255,0.3);
+  border: 2px white solid;
+  font-family: 'Open Sans', sans-serif;
+}
+/* --------- */
+
+/* --------- SUBMIT --------- */
+#button {
+ transition-property: background, color;
+ color: #fff;
+ cursor: pointer;
+ transition-duration: 0.5s;
+ transition-timing-function: linear;
+ background: transparent;
+ border: 1px solid white;
+ /*border-radius: 15px;*/
+ font-size: 17px;
+ padding: 7px 12px;
+ font-weight: normal;
+ /*margin: 6px 0;*/
+ position: relative;
+ left: 80px;
+ top: -100px;
+ margin-right: 12px;
+ display: inline-block;
+ text-decoration: none;
+ font-family: 'Open Sans', sans-serif;
+ min-width: 100px;
+}
+#button:hover {
+  background: #fff;
+  color: #1BB996;
+}
+
+/* --------- */
