@@ -2,29 +2,22 @@ from flask import Flask, render_template, request, url_for, session, redirect
 #from utils import search
 #from utils import rake
 #from utils import translator
-
-#----------------- GIPHY API ----------------- 
-import urllib,json
-data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q=beyonce&api_key=dc6zaTOxFJmzC&limit=5").read())
-#print json.dumps(data, sort_keys=True, indent=4)
-
-def getURL():
-	d = data["data"]
-	ret = []
-	for gif in d:
-		ret.append(gif['images']['downsized']['url'])
-	return ret
-#----------------- GIPHY API end ----------------- 
+import giphy #GIPHY api
 
 app= Flask(__name__)
 
 @app.route("/")
 def home():
-	return render_template("index.html", 	gif1 = getURL()[0],
-											gif2 = getURL()[1],
-											gif3 = getURL()[2],
-											gif4 = getURL()[3],
-											gif5 = getURL()[4],)
+	return render_template("index.html", 	gif1 = giphy.getURL()[0],
+											gif2 = giphy.getURL()[1],
+											gif3 = giphy.getURL()[2],
+											gif4 = giphy.getURL()[3],
+											gif5 = giphy.getURL()[4],
+											gif6 = giphy.getURL()[5],
+											gif7 = giphy.getURL()[6],
+											gif8 = giphy.getURL()[7],
+											gif9 = giphy.getURL()[8],
+											gif10 = giphy.getURL()[9],)
 
 if __name__ == "__main__":
 	app.debug = True
