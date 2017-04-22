@@ -73,10 +73,13 @@ def getMatch(input):
     key = inputD.keys()[0] #emotion
     val = inputD.values()[0] #num
 
-    f = open("utils/result.txt", "r")
+    f = open("result.txt", "r")
     text = f.read()
     f.close()
     result = json.loads(text)
+
+    minVal = result[result.keys()[0]][key][0].values()[0]
+    #print minVal
 
     for k in result:
         for line in result[k]:
@@ -86,7 +89,6 @@ def getMatch(input):
                 first = float(first)
                 absVal = abs(val - first)
                 #print absVal
-                minVal = sortedD[0].values()[0]
 
                 for entry in sortedD:
                     entryVal = float(entry.keys()[0])
