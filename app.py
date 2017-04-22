@@ -19,6 +19,14 @@ def home():
 											gif9 = giphy.getURL()[8],
 											gif10 = giphy.getURL()[9],)
 
+@app.route("/results", methods =['POST','GET'])
+def results():
+	if request.method == 'POST':
+		print request.form
+		if 'input' in request.form:
+			text = request.form['input']
+	return render_template("index.html")
+
 if __name__ == "__main__":
 	app.debug = True
 	app.run()

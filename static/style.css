@@ -3,13 +3,77 @@ body {
   margin: 0;
   color: #fff;
   background: #1BB996;
-  background: -webkit-linear-gradient(#1BB996,#3C4240);
-  background: -o-linear-gradient(#1BB996,#3C4240);
-  background: -moz-linear-gradient(#1BB996,#3C4240);
-  background: linear-gradient(#1BB996,#3C4240);
   /*color: white;*/
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif; 
+  
 }
+
+h1 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 26px;
+    /* color:white !important; */
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+pre {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+a.navbar-brand {
+  padding-top: 10px;
+  padding-left: 5vw;
+  float: left;
+}
+
+#myNavbar {
+    float: right;
+    padding-right: 5%;
+    background-color: #56b598 !important;
+}
+
+.navbar-default {
+    background-color: #56b598 !important;
+}
+
+#lyrics {
+    padding-top:50px;
+    padding-bottom: 50px;
+    height:auto;
+}
+
+#gifDiv {
+    padding-top:50px;
+    padding-bottom: 50px;
+    height:auto;
+}
+
+
+/* 
+red: #c95d67
+green: #56b598
+*/
+
+
 #container {
   height: 650px;
   /*background: #1BB996;
@@ -33,14 +97,14 @@ h1 {
 /* --------- */
 
 /* --------- INPUT --------- */
-textarea {
-  width: 400px;
-  height: 200px;
-  margin: 100px 0 0 50px;
+textarea.user {
+  width: 700px;
+  height: 50px;
   background: rgba(255,255,255,0.3);
-  border: 2px white solid;
+  border: 1px black solid;
   font-family: 'Open Sans', sans-serif;
 }
+
 /* --------- */
 
 /* --------- SUBMIT --------- */
@@ -50,17 +114,13 @@ textarea {
  cursor: pointer;
  transition-duration: 0.5s;
  transition-timing-function: linear;
- background: transparent;
- border: 1px solid white;
+ background: #56b598;
+ border: 1px solid #56b598;
  /*border-radius: 15px;*/
  font-size: 17px;
  padding: 7px 12px;
  font-weight: normal;
- /*margin: 6px 0;*/
- position: relative;
- left: 80px;
- top: -100px;
- margin-right: 12px;
+
  display: inline-block;
  text-decoration: none;
  font-family: 'Open Sans', sans-serif;
