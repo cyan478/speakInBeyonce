@@ -28,8 +28,8 @@ def parse():
 
     dSongs = {}
 
-    for filename in os.listdir('songs'):
-        f = open("songs/" + filename, "r")
+    for filename in os.listdir('utils/songs'):
+        f = open("utils/songs/" + filename, "r")
         lines = f.readlines()
         f.close()
 
@@ -64,7 +64,7 @@ def parse():
 
         dSongs[title] = dEmotions
 
-    with open('result.txt', 'w') as outfile:
+    with open('utils/result_test.txt', 'w') as outfile:
         json.dump(dSongs, outfile)
         outfile.close()
 
@@ -73,7 +73,8 @@ def getMatch(input):
     key = inputD.keys()[0] #emotion
     val = inputD.values()[0] #num
 
-    f = open("utils/result.txt", "r")
+    #print val
+    f = open("utils/result_test.txt", "r")
     text = f.read()
     f.close()
     result = json.loads(text)
@@ -81,27 +82,36 @@ def getMatch(input):
     minVal = result[result.keys()[0]][key][0].values()[0]
     #print minVal
 
+    possibleL = []
+
     for k in result:
         for line in result[k]:
             if line == key:
-                sortedD = sorted(result[k][line])
-                first = sortedD[0].keys()[0]
-                first = float(first)
-                absVal = abs(val - first)
-                #print absVal
-
-                for entry in sortedD:
-                    entryVal = float(entry.keys()[0])
-                    newVal = abs(val - entryVal)
-                    if newVal > absVal:
-                        break
-                    absVal = newVal
-                    #print newVal
-                    minVal = entry.values()[0]
+                for entry in result[k][line]:
+                    possibleL.append(entry)
                     #print minVal
                     #print entry
+
+    possibleL = sorted(possibleL)
+    #print possibleL
+
+    first = possibleL[0].keys()[0]
+    first = float(first)
+    absVal = abs(val - first)
+
+    for element in possibleL:
+        #print element
+        entryVal = float(element.keys()[0])
+        newVal = abs(val - entryVal)
+        if newVal > absVal:
+            break
+        absVal = newVal
+        #print newVal
+        minVal = element.values()[0]
+
+    #print val
     return minVal
 
 #sparse("7_11.txt")
 #parse()
-#print getMatch("boys suck")
+#print getMatch("i hate him")
