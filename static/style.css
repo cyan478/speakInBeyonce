@@ -1,10 +1,16 @@
 @font-face {
   font-family: Steelfish;
-  src: url("steelfish_outline.ttf");
+  src: url("steelfish rg.ttf");
 }
 
 h6 {
   font-family: Steelfish;
+}
+
+.steel{
+  font-family: Steelfish;
+  font-weight:bold !important;
+  font-size: 60px !important;
 }
 
 body {
@@ -115,8 +121,9 @@ textarea.user {
   background: rgba(255,255,255,0.93);
   border: 1px black solid;
   font-family: 'Open Sans', sans-serif;
-  font-size:35px;
-  padding-left:10px;
+  font-size:30px;
+  padding-left:15px;
+  text-align: center;
 }
 
 /* --------- */
@@ -142,7 +149,7 @@ textarea.user {
 }
 #button:hover {
   background: #fff;
-  color: #1BB996;
+  background: rgba(255, 169, 201, 0.6); color: #fff; text-decoration-color: #8d9397
 }
 
 /* --------- */
