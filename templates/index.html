@@ -34,66 +34,64 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
-                  <h1 class="animated fadeInDown" style="color:black">SPEAK IN BEYONCE</span></h1>
-                  <p class="animated fadeInUp delay-05s">Express yourself through Beyonce lyrics and GIFs</em></p>
+                  <h1 class="animated fadeInDown" style="color:#ffa9c1"><b>SPEAK IN BEYONCE</b></span></h1>
+                  <p class="animated fadeInUp delay-05s" style="color:white">Express yourself through Beyonce lyrics and GIFs</em></p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                  <a href="http://tympanus.net/codrops/?p=19439" class="learn-more-btn">Speak in Lyrics</a> 
+                  <a class="page-scroll learn-more-btn" href="#lyrics" >Speak in Lyrics</a> 
                   <br>
-                  <a href="http://tympanus.net/codrops/?p=19439" class="learn-more-btn">Speak in Gifs</a>
+                  <a class="page-scroll learn-more-btn" href="#gifDiv" >Speak in Gifs</a>
                 </div>
               </div>
             </div>
           </section>
         </header>
 
-          <li class="hidden"><a class="page-scroll`" href="#page-top"></a></li>
-          <li><a class="page-scroll" href="#lyrics" style="color:black">Speak in Lyrics</a></li>
-          <li><a class="page-scroll" href="#gifDiv" style="color:black">Speak in Gifs</a></li>
 
+          <div id="lyrics" class="container-fluid" style="background-color:black">
+            <center> 
+            <h1 class="animated fadeInDown" style="color:#ffa9c1"><b>SPEAK IN LYRICS</b></span></h1>
+            <p class="animated fadeInUp delay-05s" style="color:white">Generate a lyric line and GIFs that fit your mood</em></p>
+            </center>
+            <br><br>
+            <div class="row" style="padding-left: 5%">
+              <center>
+                <form action = "/results" method = "POST" id = "form">
+                  <textarea class="user" name="input" placeholder="What are you feeling?" autofocus></textarea>
+                  <br><br>
+                  <input type="submit" name="submit" id="button" value="Translate">
+                  <br><br>
+                  <h3> {{lyric}} </h3>
+                  <br><br>
+                </form>
+              </center>
+            </div>
+          </div>
 
-<!-- ppt content goes in -->
-<div id="lyrics" class="container-fluid">
-  <h2>Speak in Lyrics</h2>
-  <br><br>
-  <div class="row" style="padding-left: 5%">
-      <center>
-      <form action = "/results" method = "POST" id = "form">
-        <textarea class="user" name="input" placeholder="Let it all out..." autofocus></textarea>
-        <br><br>
-        <input type="submit" name="submit" id="button" value="Translate">
+          <div id="gifDiv" class="container-fluid" style="background-color:black">
+            <center> 
+            <h1 class="animated fadeInDown" style="color:#ffa9c1"><b>SPEAK IN GIFS</b></span></h1>
+            <p class="animated fadeInUp delay-05s" style="color:white">Straight from GIPHY</em></p>
+            </center>
 
-
-        <br><br>
-
-        <h3> {{lyric}} </h3>
-
-        <br><br>
-      </form>
-      </center>
-  </div>
-
-</div>
-
-<div id="gifDiv" class="container-fluid">
-  <h2>Speak in Gifs</h2>
-
-  <br><br>
-  <div class="row" style="padding-left: 5%">
-      <img src= "{{ gif1 }}" style="height:200px;">
-      <img src= "{{ gif2 }}" style="height:200px;">
-      <img src= "{{ gif3 }}" style="height:200px;">
-      <img src= "{{ gif4 }}" style="height:200px;">
-      <img src= "{{ gif5 }}" style="height:200px;">
-      <img src= "{{ gif6 }}" style="height:200px;">
-      <img src= "{{ gif7 }}" style="height:200px;">
-      <img src= "{{ gif8 }}" style="height:200px;">
-      <img src= "{{ gif9 }}" style="height:200px;">
-  </div>
-</div>
-<br>
+            <br><br>
+            <div class="row">
+            <center>
+              <img src= "{{ gif1 }}" style="height:200px;">
+              <img src= "{{ gif2 }}" style="height:200px;">
+              <img src= "{{ gif3 }}" style="height:200px;">
+              <img src= "{{ gif4 }}" style="height:200px;">
+              <img src= "{{ gif5 }}" style="height:200px;">
+              <img src= "{{ gif6 }}" style="height:200px;">
+              <img src= "{{ gif7 }}" style="height:200px;">
+              <img src= "{{ gif8 }}" style="height:200px;">
+              <img src= "{{ gif9 }}" style="height:200px;">
+            </center>
+            </div>
+          </div>
+ 
 
 <script src="../static/jquery.js"></script>
 <script src="../static/bootstrap.min.js"></script>
